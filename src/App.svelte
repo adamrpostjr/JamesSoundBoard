@@ -9,7 +9,8 @@
   <Button sound="/static-sounds/defecate_in_a_diaper.mp3">defecate in a diaper</Button>
   <Button sound="/static-sounds/freak_the_freak_out.mp3">freak the freak out</Button>
   <Button sound="/static-sounds/fun_is_not_the_word_id_use.mp3">fun is not the word id use</Button>
-  <Button sound="/static-sounds/hah_no.mp3hillbilly_haywood.mp3">hah nohillbilly haywood</Button>
+  <Button sound="/static-sounds/hah_no.mp3">hah no</Button>
+  <Button sound="/static-sounds/hillbilly_haywood.mp3">hillbilly haywood</Button>
   <Button sound="/static-sounds/i_hate_this_office.mp3">i hate this office</Button>
   <Button sound="/static-sounds/i_have_one_more_bite.mp3">i have one more bite</Button>
   <Button sound="/static-sounds/i_need_someone_whos_not_incompetent.mp3">i need someone whos not incompetent</Button>
@@ -28,7 +29,7 @@
   <Button sound="/static-sounds/purdy_mouth.mp3">purdy mouth</Button>
   <Button sound="/static-sounds/ram_a_car.mp3">ram a car</Button>
   <Button sound="/static-sounds/scrumdiddlyumptious.mp3">scrumdiddlyumptious</Button>
-  <Button sound="/static-sounds/shower_you.mp3">shower you</Button>
+  <!-- <Button sound="/static-sounds/shower_you.mp3">shower you</Button> -->
   <Button sound="/static-sounds/tell_me_more_about_yourself.mp3">tell me more about yourself</Button>
   <Button sound="/static-sounds/that_doesnt_make_sense.mp3">that doesnt make sense</Button>
   <Button sound="/static-sounds/this_is_james.mp3">this is james</Button>
