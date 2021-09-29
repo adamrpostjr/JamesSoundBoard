@@ -3,4 +3,4 @@
 
 .DS_Store
 
-/public/static-sounds/
+*.mp3
