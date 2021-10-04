@@ -4,6 +4,7 @@
 
 <main>
   <Button sound="/static-sounds/anal_seepage.mp3">anal seepage</Button>
+  <Button sound="/static-sounds/baby_you_so_hot.mp3">Baby You So Hot</Button>
   <Button sound="/static-sounds/blood_pressure_attack.mp3">blood pressure attack</Button>
   <Button sound="/static-sounds/can_you_grow_up.mp3">can you grow up</Button>
   <Button sound="/static-sounds/defecate_in_a_diaper.mp3">defecate in a diaper</Button>
@@ -29,7 +30,7 @@
   <Button sound="/static-sounds/purdy_mouth.mp3">purdy mouth</Button>
   <Button sound="/static-sounds/ram_a_car.mp3">ram a car</Button>
   <Button sound="/static-sounds/scrumdiddlyumptious.mp3">scrumdiddlyumptious</Button>
-  <!-- <Button sound="/static-sounds/shower_you.mp3">shower you</Button> -->
+  <Button sound="/static-sounds/shower_you.mp3">shower you</Button>
   <Button sound="/static-sounds/tell_me_more_about_yourself.mp3">tell me more about yourself</Button>
   <Button sound="/static-sounds/that_doesnt_make_sense.mp3">that doesnt make sense</Button>
   <Button sound="/static-sounds/this_is_james.mp3">this is james</Button>
