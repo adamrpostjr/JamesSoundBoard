@@ -1,8 +1,10 @@
 <script>
   import Button from './button.svelte';
+  import Sentence from './sen.svelte';
 </script>
 
 <main>
+  <Sentence />
   <Button sound="/static-sounds/anal_seepage.mp3">anal seepage</Button>
   <Button sound="/static-sounds/baby_you_so_hot.mp3">Baby You So Hot</Button>
   <Button sound="/static-sounds/blood_pressure_attack.mp3">blood pressure attack</Button>
