@@ -72,7 +72,7 @@
   <Button sound="/static-sounds/okay_idiot.mp3">okay idiot</Button>
   <Button sound="/static-sounds/what_do_you_want_from_me.mp3">what do you want from me</Button>
   <Button sound="/static-sounds/not_interested_in_drugs.mp3">not interested in drugs</Button>
-  <Button sound="/static-sounds/you_know_who_i_am.mp3">you know who i am.mp3</Button>
+  <Button sound="/static-sounds/you_know_who_i_am.mp3">you know who i am</Button>
   <Button sound="/static-sounds/youre_an_idiot.mp3">youre an idiot</Button>
   <Button sound="/static-sounds/will_not_be_saying_anything_ridiculous.mp3">will not be saying anything ridiculous</Button>
   <Button sound="/static-sounds/your_friggen_mom.mp3">your friggen mom</Button>
