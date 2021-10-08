@@ -5,7 +5,6 @@
 
   var Sound;
 
-  
   const handleDrop = (event) => {
     if (playing == 0) {
       items = [...items, JSON.parse(event.dataTransfer.getData('text/plain'))];
@@ -74,7 +73,7 @@
 <hr />
 
 <style>
-  instructions{
+  instructions {
     position: absolute;
     top: 15px;
     left: 50%;
