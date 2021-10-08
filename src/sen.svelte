@@ -51,9 +51,9 @@
   <dashedline />
   <tracker />
 </builder>
-<row>
-  <custom-button on:click={() => (items.length = 0)} style="width: 50%">Clear</custom-button>
-  <custom-button on:click={playSen} style="width: 50%">Play</custom-button>
+<row class:disabled={playing}>
+  <custom-button class:disabled={playing} on:click={() => (!playing ? (items.length = 0) : '')} style="width: 50%">Clear</custom-button>
+  <custom-button class:disabled={playing} on:click={() => (!playing ? playSen() : '')} style="width: 50%">Play</custom-button>
 </row>
 <hr />
 
@@ -70,9 +70,15 @@
   }
   row {
     width: 100%;
+    height: 55px;
     display: flex;
     flex-direction: row;
     justify-content: space-around;
+    overflow: hidden;
+    transition: 1s cubic-bezier(0.455, 0.03, 0.515, 0.955);
+  }
+  row.disabled {
+    height: 1px;
   }
   custom-button {
     position: relative;
@@ -92,6 +98,10 @@
     transition: 0.5s cubic-bezier(0.19, 1, 0.22, 1);
     color: black;
     background: white;
+  }
+  custom-button.disabled {
+    background-color: grey;
+    cursor: not-allowed;
   }
   custom-button.audio {
     z-index: 50;
