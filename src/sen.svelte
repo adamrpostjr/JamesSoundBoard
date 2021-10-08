@@ -2,6 +2,9 @@
   import { fly, fade } from 'svelte/transition';
   var items = [];
   var tracker;
+
+  var Sound;
+
   $: items, console.log(items);
   const handleDrop = (event) => {
     if (playing == 0) {
@@ -20,6 +23,7 @@
       playing = 1;
       let audio = new Audio();
       audio.src = items[index].uri;
+      Sound = items[index].Name;
       audio.play();
       audio.onended = () => {
         index++;
@@ -28,6 +32,7 @@
     } else {
       playing = 0;
       index = 0;
+      Sound = null;
       items.length = 0;
       tracker.style.transition = 'unset';
       tracker.style.left = '0%';
@@ -40,6 +45,10 @@
     }
   };
 </script>
+
+<svelte:head>
+  <title>{Sound ? `Playing: ${Sound}` : 'James Sound Board'}</title>
+</svelte:head>
 
 <builder class:noscroll={playing == 1} on:drop|stopPropagation={handleDrop} on:dragenter|preventDefault on:dragover|preventDefault>
   {#if playing}
