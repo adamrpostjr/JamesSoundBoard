@@ -1,17 +1,18 @@
 <script>
-  import { onMount } from 'svelte';
-
+  import { fly, fade } from 'svelte/transition';
   var items = [];
   $: items, console.log(items);
   const handleDrop = (event) => {
-    console.log(JSON.parse(event.dataTransfer.getData('text/plain')));
-    items = [...items, JSON.parse(event.dataTransfer.getData('text/plain'))];
+    if (playing == 0) {
+      items = [...items, JSON.parse(event.dataTransfer.getData('text/plain'))];
+    }
   };
 
   let index = 0;
-
+  let playing = 0;
   const playSen = async () => {
     if (items.length && index < items.length) {
+      playing = 1;
       let audio = new Audio();
       audio.src = items[index].uri;
       audio.play();
@@ -20,15 +21,32 @@
         playSen();
       };
     } else {
+      playing = 0;
       index = 0;
       items.length = 0;
     }
   };
+  const removeItem = (i) => {
+    if (playing == 0) {
+      items.splice(i, 1);
+      items = items;
+    }
+  };
 </script>
 
-<builder on:drop|stopPropagation={handleDrop} on:dragenter|preventDefault on:dragover|preventDefault>
-  {#each items as item}
-    <custom-button>{item.Name}</custom-button>
+<builder class:noscroll={playing == 1} on:drop|stopPropagation={handleDrop} on:dragenter|preventDefault on:dragover|preventDefault>
+  {#if playing}
+    <overlay transition:fly={{ y: -100 }} />
+  {/if}
+
+  {#each items as item, i}
+    <custom-button
+      in:fade
+      class:audio={playing == 0}
+      on:click={() => {
+        removeItem(i);
+      }}>{item.Name}</custom-button
+    >
   {/each}
   <dashedline />
   <tracker />
@@ -40,6 +58,16 @@
 <hr />
 
 <style>
+  overlay {
+    z-index: 150;
+    background: rgb(0, 0, 0);
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0.5) 0%, rgba(156, 156, 156, 0.8575805322128851) 49%, rgba(0, 0, 0, 0.5) 100%);
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
   row {
     width: 100%;
     display: flex;
@@ -47,6 +75,7 @@
     justify-content: space-around;
   }
   custom-button {
+    position: relative;
     display: inline-block;
     flex-direction: column;
     justify-content: center;
@@ -64,6 +93,28 @@
     color: black;
     background: white;
   }
+  custom-button.audio {
+    z-index: 50;
+  }
+
+  custom-button.audio:hover {
+    background-color: #8c0101;
+    color: rgb(87, 0, 0);
+  }
+
+  custom-button.audio:hover::after {
+    content: '🗑';
+    position: absolute;
+    height: 30px;
+    width: 30px;
+    top: 42%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: black;
+    font-weight: bolder;
+    font-size: 30px;
+  }
+
   builder {
     font-family: monospace;
     font-weight: bolder;
@@ -77,6 +128,9 @@
     white-space: nowrap;
     overflow-x: scroll;
     overflow-y: hidden;
+  }
+  .noscroll {
+    overflow: hidden;
   }
   dashedline {
     display: block;
