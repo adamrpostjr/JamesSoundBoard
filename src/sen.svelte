@@ -7,6 +7,23 @@
     console.log(JSON.parse(event.dataTransfer.getData('text/plain')));
     items = [...items, JSON.parse(event.dataTransfer.getData('text/plain'))];
   };
+
+  let index = 0;
+
+  const playSen = async () => {
+    if (items.length && index < items.length) {
+      let audio = new Audio();
+      audio.src = items[index].uri;
+      audio.play();
+      audio.onended = () => {
+        index++;
+        playSen();
+      };
+    } else {
+      index = 0;
+      items.length = 0;
+    }
+  };
 </script>
 
 <builder on:drop|stopPropagation={handleDrop} on:dragenter|preventDefault on:dragover|preventDefault>
@@ -18,7 +35,7 @@
 </builder>
 <row>
   <custom-button on:click={() => (items.length = 0)} style="width: 50%">Clear</custom-button>
-  <custom-button style="width: 50%">Play</custom-button>
+  <custom-button on:click={playSen} style="width: 50%">Play</custom-button>
 </row>
 <hr />
 
