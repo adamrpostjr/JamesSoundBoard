@@ -1,6 +1,7 @@
 <script>
   import { fly, fade } from 'svelte/transition';
   var items = [];
+  var tracker;
   $: items, console.log(items);
   const handleDrop = (event) => {
     if (playing == 0) {
@@ -11,6 +12,10 @@
   let index = 0;
   let playing = 0;
   const playSen = async () => {
+    if (playing == 0) {
+      tracker.style.left = '99%';
+      tracker.style.transition = '';
+    }
     if (items.length && index < items.length) {
       playing = 1;
       let audio = new Audio();
@@ -24,6 +29,8 @@
       playing = 0;
       index = 0;
       items.length = 0;
+      tracker.style.transition = 'unset';
+      tracker.style.left = '0%';
     }
   };
   const removeItem = (i) => {
@@ -49,7 +56,7 @@
     >
   {/each}
   <dashedline />
-  <tracker />
+  <tracker bind:this={tracker} />
 </builder>
 <row class:disabled={playing}>
   <custom-button class:disabled={playing} on:click={() => (!playing ? (items.length = 0) : '')} style="width: 50%">Clear</custom-button>
