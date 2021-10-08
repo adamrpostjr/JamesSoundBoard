@@ -5,6 +5,7 @@
 
 <main>
   <Sentence />
+  <row>
   <Button sound="/static-sounds/anal_seepage.mp3">anal seepage</Button>
   <Button sound="/static-sounds/baby_you_so_hot.mp3">Baby You So Hot</Button>
   <Button sound="/static-sounds/blood_pressure_attack.mp3">blood pressure attack</Button>
@@ -48,7 +49,39 @@
   <Button sound="/static-sounds/you_smell_like_poo.mp3">you smell like poo</Button>
   <Button sound="/static-sounds/youre_embarrassing_me_in_front_of_the_office.mp3">youre embarrassing me in front of the office</Button>
   <Button sound="/static-sounds/youre_the_dumbest_person.mp3">youre the dumbest person</Button>
+  <Button sound="/static-sounds/brain_dead.mp3">brain dead</Button>
+  <Button sound="/static-sounds/i_dont_remember_things_i_do.mp3">i dont remember things i do</Button>
+  <Button sound="/static-sounds/arabian_eye_goggles.mp3">arabian eye goggles</Button>
+  <Button sound="/static-sounds/full_of_bologna.mp3">full of bologna</Button>
+  <Button sound="/static-sounds/i_dont_know_what_youre_talking_about.mp3">i dont know what youre talking about</Button>
+  <Button sound="/static-sounds/ill_do_you_one_better.mp3">ill do you one better</Button>
+  <Button sound="/static-sounds/i_cant_process_this.mp3">i cant process this</Button>
+  <Button sound="/static-sounds/im_better_than_you.mp3">im better than you</Button>
+  <Button sound="/static-sounds/im_a_professional.mp3">im a professional</Button>
+  <Button sound="/static-sounds/check_your_pulse.mp3">check your pulse</Button>
+  <Button sound="/static-sounds/karate_chop_your_face.mp3">karate chop your face</Button>
+  <Button sound="/static-sounds/incredibly_inappropriate.mp3">incredibly inappropriate</Button>
+  <Button sound="/static-sounds/no_por_favor_lo_siento.mp3">no por favor lo siento</Button>
+  <Button sound="/static-sounds/light_you_on_fire_v2.mp3">light you on fire v2</Button>
+  <Button sound="/static-sounds/professional_information.mp3">professional information</Button>
+  <Button sound="/static-sounds/okay_idiot.mp3">okay idiot</Button>
+  <Button sound="/static-sounds/what_do_you_want_from_me.mp3">what do you want from me</Button>
+  <Button sound="/static-sounds/not_interested_in_drugs.mp3">not interested in drugs</Button>
+  <Button sound="/static-sounds/you_know_who_i_am.mp3">you know who i am.mp3</Button>
+  <Button sound="/static-sounds/youre_an_idiot.mp3">youre an idiot</Button>
+  <Button sound="/static-sounds/will_not_be_saying_anything_ridiculous.mp3">will not be saying anything ridiculous</Button>
+  <Button sound="/static-sounds/your_friggen_mom.mp3">your friggen mom</Button>
+  <Button sound="/static-sounds/professional_adult.mp3">professional adult</Button>
+  <Button sound="/static-sounds/pokemon_song.mp3">pokemon song</Button>
+  <Button sound="/static-sounds/ooookay.mp3">ooookay</Button>
+</row>
 </main>
 
 <style>
+  row{
+    display: flex;
+    flex: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+  }
 </style>

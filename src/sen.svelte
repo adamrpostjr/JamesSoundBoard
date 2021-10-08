@@ -54,7 +54,7 @@
   {#if playing}
     <overlay transition:fly={{ y: -100 }} />
   {/if}
-
+  <instructions>Drag and Drop buttons here to build a sentence</instructions>
   {#each items as item, i}
     <custom-button
       in:fade
@@ -74,6 +74,12 @@
 <hr />
 
 <style>
+  instructions{
+    position: absolute;
+    top: 15px;
+    left: 50%;
+    transform: translate(-50%);
+  }
   overlay {
     z-index: 150;
     background: rgb(0, 0, 0);
