@@ -5,7 +5,7 @@
 
   var Sound;
 
-  $: items, console.log(items);
+  
   const handleDrop = (event) => {
     if (playing == 0) {
       items = [...items, JSON.parse(event.dataTransfer.getData('text/plain'))];
@@ -98,6 +98,7 @@
     justify-content: space-around;
     overflow: hidden;
     transition: 1s cubic-bezier(0.455, 0.03, 0.515, 0.955);
+    background: white;
   }
   row.disabled {
     height: 1px;
@@ -160,6 +161,7 @@
     white-space: nowrap;
     overflow-x: scroll;
     overflow-y: hidden;
+    background: white;
   }
   .noscroll {
     overflow: hidden;

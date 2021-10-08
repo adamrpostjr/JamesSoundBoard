@@ -2,6 +2,8 @@
   export let sound;
   let player;
 
+  
+
   const startDrag = (event) => {
     event.dataTransfer.setData('text/plain', JSON.stringify({ uri: sound, Name: sound.split('/')[sound.split('/').length - 1].split('.')[0].replaceAll('_', ' ') }));
   };
@@ -9,7 +11,7 @@
 
 <custom-button draggable="true" id={sound} on:dragstart={startDrag} on:click={() => player.play()}>
   <slot />
-  <audio bind:this={player} src={sound} />
+  <audio bind:this={player} on:volumechange={(e)=>{console.log(e)}} src={sound} />
 </custom-button>
 
 <style>
