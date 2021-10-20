@@ -108,6 +108,7 @@
     flex-wrap: wrap;
     justify-content: space-evenly;
     height: 100%;
+    width: 100%;
     overflow: scroll;
   }
   row {
