@@ -102,7 +102,7 @@
     height: 100%;
     overflow: hidden;
   }
-  buttons{
+  buttons {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
@@ -119,8 +119,18 @@
   }
 
   @media only screen and (max-width: 800px) {
-  james {
-    display: none;
+    james {
+      display: none;
+    }
+    buttons {
+      flex-direction: column;
+    }
   }
-}
+  @media only screen and (max-width: 1000px) {
+    buttons {
+      flex-direction: column;
+      flex-wrap: nowrap;
+      justify-content: unset;
+    }
+  }
 </style>
