@@ -2,7 +2,41 @@
   import Button from './button.svelte';
   import Sentence from './sen.svelte';
   import James from './james.svelte';
+
+  /*
+  var audioCtx = new AudioContext();
+  var url = '/static-sounds/freak_the_freak_out.mp3';
+  var audio = new Audio(url);
+  var processor = audioCtx.createScriptProcessor(2048, 1, 1);
+  var workletNode = new AudioWorkletNode(audioCtx, workletNode);
+  //var meter = document.getElementById('meter');
+  var source;
+
+  audio.addEventListener('canplaythrough', function(){
+  source = audioCtx.createMediaElementSource(audio);
+  source.connect(processor);
+  source.connect(audioCtx.destination);
+  processor.connect(audioCtx.destination);
+  audio.play();
+  }, false);
+
+  // loop through PCM data and calculate average
+  // volume for a given 2048 sample buffer
+  processor.onaudioprocess = function(evt){
+  var input = evt.inputBuffer.getChannelData(0)
+    , len = input.length   
+    , total = i = 0
+    , rms;
+  while ( i < len ) total += Math.abs( input[i++] );
+  rms = Math.sqrt( total / len );
+  console.log(( rms * 100 ));
+  };
+  */
+
 </script>
+
+
+
 
 <main>
   <!-- <row style="position:sticky; top:0"> -->
