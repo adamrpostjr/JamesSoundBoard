@@ -8,7 +8,7 @@
 
 
   const checker = () =>{
-    fetch('http://localhost:8085/sounds')
+    fetch('/sounds')
       .then((response) => response.json())
       .then((data) => (allSounds = data));
       setInterval(() => {
@@ -32,7 +32,7 @@
     <row style="flex-wrap: nowrap; height: 100%">
       <buttons>
         {#each allSounds as sound}
-          <Button sound="http://localhost:8085/sounds/{sound}">{sound.split('.')[0].replaceAll('_', ' ')}</Button>
+          <Button sound="/sounds/{sound}">{sound.split('.')[0].replaceAll('_', ' ')}</Button>
         {/each}
       </buttons>
       <james>
