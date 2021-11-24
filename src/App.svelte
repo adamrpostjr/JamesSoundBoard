@@ -16,6 +16,8 @@
 
 
   onMount(() => {
+    checker()
+
     setInterval(() => {
       checker()
     }, 10000);
