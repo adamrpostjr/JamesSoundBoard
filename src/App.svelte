@@ -11,15 +11,14 @@
     fetch('/sounds')
       .then((response) => response.json())
       .then((data) => (allSounds = data));
-      setInterval(() => {
-        checker()
-      }, 10000);
     }
 
 
 
   onMount(() => {
-    checker()
+    setInterval(() => {
+      checker()
+    }, 10000);
   });
 </script>
 
