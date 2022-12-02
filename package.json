@@ -23,6 +23,8 @@
 	"type": "module",
 	"dependencies": {
 		"@picocss/pico": "^1.5.6",
-		"mysql2": "^2.3.3"
+		"bcrypt": "^5.1.0",
+		"mysql2": "^2.3.3",
+		"uuid": "^9.0.0"
 	}
 }

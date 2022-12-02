@@ -1,9 +1,9 @@
 <script>
+    import { enhance } from '$app/forms';
     let remember = true
-    
-    const login = () =>{
-        console.log('do login -- then redirect')
-    }
+
+    export let form;
+
 
 </script>
 
@@ -14,8 +14,8 @@
           <h1>Login In</h1>
           <h2>JamesHaywood.wang</h2>
         </hgroup>
-        <form on:submit|preventDefault={login} >
-          <input type="text" name="email" placeholder="Email" aria-label="Login" autocomplete="nickname" required>
+        <form method="POST" use:enhance>
+          <input type="text" name="email" placeholder="Email" aria-label="Email" autocomplete="nickname" required>
           <input type="password" name="password" placeholder="Password" aria-label="Password" autocomplete="current-password" required>
           <fieldset>
             <label for="remember">
@@ -23,10 +23,10 @@
               Remember me
             </label>
           </fieldset>
-          <button type="submit" class="contrast" >Login</button>
+          <!-- <button type="submit" class="contrast">Login</button> -->
+          <button>Login</button>
         </form>
       </div>
-      <div></div>
     </article>
   </main>
 
@@ -36,5 +36,7 @@
         top: 50%;
         left: 50%;
         transform: translate(-50%, -50%);
+  
     }
+
   </style>
